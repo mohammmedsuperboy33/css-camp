@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            width: 100%;
+            margin-top: 100px;
+            height: 600px;
+            background-color: bisque;
+            padding-top: 30px;
+        }
+
+        .parent .test {
+            width: 50%;
+            height: 300px;
+            margin: auto;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 2s;
+            overflow: hidden;
+        }
+
+        .parent .test:hover img {
+            transform: scale(1.4);
+            filter: grayscale(100%);
+            filter: blur();
+            filter: invert();
+            opacity: 0.5;
+        }
+
+        .parent .test img {
+            width: 100%;
+            height: 100%;
+            transition: all 2s;
+
+        }
+
+
+        .animation {
+            margin: auto;
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            background-color: red;
+            animation-name: move;
+            animation-name: color;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            border: 5px solid black;
+            border-left-color: transparent;
+            animation-delay: 2s;
+            animation-timing-function: linear;
+        }
+
+        /* .animation:hover {
+            animation-play-state: paused;
+
+        } */
+        .op div {
+            text-align: center;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: auto;
+            background-color: brown;
+           
+            animation-name: change-color;
+            animation-iteration-count: infinite;
+            animation-duration: 0.5s;
+
+
+        }
+
+        div .b {
+            animation-delay: 0.2s;
+        }
+
+        div .c {
+            animation-delay: 0.4s;
+        }
+
+
+        @keyframes change-color {
+
+            0% {
+                opacity: 1;
+            }
+
+            25% {
+                opacity: 0.5;
+
+            }
+
+            100% {
+                opacity: 0.1;
+
+            }
+
+
+        }
+
+        @keyframes move {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+
+        <div class="test">
+            <img src="nice.jpeg">
+
+        </div>
+    </div>
+
+    <div class="animation">
+    </div>
+
+    <div class="op">
+        <div class="tot"></div>
+        <div class="b"></div>
+        <div class="c"></div>
+    </div>
+</body>
+
+</html>

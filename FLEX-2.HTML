@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<STYLE>
+    /* Medium devices (landscape tablets, 768px and up) 0-768*/
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        direction: rtl;
+    }
+
+    .parent {
+        height: auto;
+
+        background-color: cyan;
+        justify-content: space-evenly;
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .parent div {
+        width: 22%;
+        margin-bottom: 20px;
+        height: 200px;
+        background-color: blue;
+        /* margin-left: 10px; */
+    }
+
+    .pic {
+        width: 100%;
+        height:auto;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        
+    }
+
+    .pic .fle {
+        width: 45%;
+        height: 200px;
+    }
+
+
+
+
+
+
+
+    @media (max-width: 768px) {
+
+        .parent div {
+            width: 90%;
+        }
+    }
+
+    @media (min-width: 768px) {
+
+        .parent div {
+            width: 90%;
+        }
+    }
+
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media (min-width: 992px) {
+
+        .parent div {
+            width: 45%;
+        }
+    }
+
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media (min-width: 1200px) {
+        .parent .child {
+            background: rgb(195, 12, 42);
+        }
+
+        .parent div {
+            width: 22%;
+        }
+    }
+</STYLE>
+
+<body>
+    <div class="parent">
+
+
+        <div class="child">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
+    <div class="pic">
+
+    
+    <img class="fle" src="download (1).jpg">
+    <img class="fle" src="download (1).jpg">
+</div>
+
+</body>
+
+</html>
